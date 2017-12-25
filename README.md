@@ -7,7 +7,8 @@ OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](
 * SSH login details are user: "root" password: "openpht" or "rasplex" depending on distribution.
 
 **Build**
-* `DISTRO=OpenPHT PROJECT=S905 ARCH=aarch64 make image
+
+* `DISTRO=OpenPHT PROJECT=S905 ARCH=aarch64 make image`
 * `DISTRO=OpenPHT PROJECT=Generic ARCH=x86_64 make image`
 * `DISTRO=RasPlex PROJECT=RPi2 ARCH=arm make image`
 * `DISTRO=RasPlex PROJECT=RPi ARCH=arm make image`
