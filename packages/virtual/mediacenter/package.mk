@@ -43,10 +43,16 @@ if [ "$MEDIACENTER" = "kodi" ]; then
                                           pycrypto"
 # other packages
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET LibreELEC-settings \
-                                          xmlstarlet"
-  
-  if [ "$JOYSTICK_SUPPORT" = "yes" ]; then
-    PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET peripheral.joystick"
-  fi
+                                          xmlstarlet \
+                                          peripheral.joystick"
+fi
 
+if [ "$MEDIACENTER" = "plexht" ]; then
+# some python stuff needed for various addons
+  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET Pillow \
+                                          simplejson \
+                                          pycrypto"
+# other packages
+  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET OpenPHT-settings \
+                                          xmlstarlet"
 fi
