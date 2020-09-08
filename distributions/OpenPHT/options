@@ -27,7 +27,7 @@
   MEDIACENTER="plexht"
 
 if [ -z "$OPENPHT_BRANCH" ]; then
-  OPENPHT_BRANCH="openpht-1.8"
+  OPENPHT_BRANCH="openpht-1.9"
 fi
 if [ -z "$OPENPHT_REPO" ]; then
   OPENPHT_REPO="https://github.com/RasPlex/OpenPHT.git"
