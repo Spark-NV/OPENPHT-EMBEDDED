@@ -37,16 +37,16 @@ make_target() {
 
   if [ "$TARGET_KERNEL_ARCH" = "arm64" -a "$TARGET_ARCH" = "arm" ]; then
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET gcc-linaro-aarch64-linux-gnu:host"
-    export PATH=$TOOLCHAIN/lib/gcc-linaro-aarch64-linux-gnu/bin/:$PATH
+    export PATH=$ROOT/$TOOLCHAIN/lib/gcc-linaro-aarch64-linux-gnu/bin/:$PATH
     TARGET_PREFIX=aarch64-linux-gnu-
   fi
 
-  KERNELRELEASE=y LDFLAGS=""  make -C $(kernel_path) M=$PKG_BUILD/driver
+  KERNELRELEASE=y LDFLAGS=""  make -C $(kernel_path) M=$ROOT/$PKG_BUILD/driver
 }
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME
-    find $PKG_BUILD/ -name \*.ko -not -path '*/\.*' -exec cp {} $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME \;
+    find $ROOT/$PKG_BUILD/ -name \*.ko -not -path '*/\.*' -exec cp {} $INSTALL/usr/lib/modules/$(get_module_dir)/$PKG_NAME \;
 
   mkdir -p $INSTALL/usr/sbin
     cp -P FD628Service $INSTALL/usr/sbin
