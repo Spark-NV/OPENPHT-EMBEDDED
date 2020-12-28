@@ -1,3 +1,5 @@
+This repo is kept for backup incase of gitlab issues. main repo is kept on gitlab (https://gitlab.com/spark-nv) due to incorporating all source files and githubs file size limits
+
 # OpenPHT-Embedded
 
 OpenPHT-Embedded is a 'Just enough OS' Linux distribution for running [OpenPHT](https://github.com/RasPlex/OpenPHT) on popular mediacentre hardware.
